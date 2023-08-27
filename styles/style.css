@@ -1,0 +1,298 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --main-color: #1ce783;
+    --main-color-translucent: rgba(28, 231, 129, 0.8);
+    --black: rgb(11, 12, 15);
+}
+
+body {
+    font-family: open sans;
+    font-family: 'open Sans', sans-serif;
+}
+
+header {
+    min-height: 660px;
+    width: 100%;
+    background-image: url("/images/original.jpeg");
+    background-position: right;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+header .gradient-container {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.2), transparent, transparent);
+    position: absolute;
+    top: 0;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+header nav {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.2), transparent);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 56px 25px 40px;
+}
+
+header nav a {
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: .92rem;
+    font-weight: bold;
+    color: #a8afbd;
+}
+
+/* HEADER PRICING PLANS */
+
+.header-pricing-plans {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    text-align: center;
+    letter-spacing: 0px;
+}
+
+.pricing-plan-container {
+    display: flex;
+    gap: 2rem;
+    padding-top: 1rem;
+}
+
+.pricing-plan {
+    width: 320px;
+}
+
+.pricing-plan h2 {
+    font-size: .8rem;
+    color: var(--main-color);
+}
+
+.pricing-plan.duo h2 {
+    margin-bottom: 1.7rem;
+}
+
+.pricing-plan__header {
+    margin-bottom: 1.2rem;
+}
+
+
+.pricing-plan.duo img {
+    height: 56px;
+}
+
+.pricing-plan.trio img {
+    height: 64px;
+}
+
+.pricing-plan__details {
+    margin: 1.1rem auto;
+    margin-bottom: 1.5rem;
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 600;
+    max-width: 240px;
+    line-height: 1.9rem;
+}
+
+.pricing-plan__btn {
+    width: 100%;
+    padding: 13px 0;
+    border-radius: 5px;
+    background-color: var(--main-color);
+    border: none;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    cursor: pointer;
+    transition: .15s;
+}
+
+.pricing-plan__btn:hover {
+    background-color: var(--main-color-translucent);
+}
+
+.header-pricing-plans :is(.terms, .signup) {
+    color: white;
+    font-size: .85rem;
+}
+
+.header-pricing-plans .signup {
+    margin-top: 1.5rem;
+    font-size: 1rem;
+}
+
+.header-pricing-plans .signup:hover {
+    opacity: 0.5;
+}
+
+/* MOVIE CATEGORY SECTION */
+
+section.movie-categories,
+section.live-tv {
+    background-color: var(--black);
+    color: white;
+    padding: 5.5rem 0;
+    text-align: center;
+}
+
+.section-header .description {
+    color: var(--main-color);
+    font-size: .8rem;
+    margin-bottom: .6rem;
+}
+
+.section-header .title {
+    font-size: 2.9rem;
+    margin-bottom: 1.5rem;
+}
+
+.section-header .details {
+    max-width: 775px;
+    margin: auto;
+    margin-bottom: 3.5rem;
+}
+
+.categories {
+    display: flex;
+    gap: 2.2rem;
+    justify-content: center;
+}
+
+.category {
+    position: relative;
+    width: 295px;
+    height: 450px;
+    border-radius: 10px;
+    overflow: hidden;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    transition: .05s;
+    outline: solid 3px transparent;
+    cursor: pointer;
+}
+
+.category:hover {
+    outline-color: #aaa;
+    outline-offset: 5px;
+}
+
+.category:hover .category-container {
+    background-image: radial-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.6));
+}
+
+.category.one {
+    background-image: url(../images/category-1.jpg);
+}
+
+.category.two {
+    background-image: url(../images/category-2.jpg);
+}
+
+.category.three {
+    background-image: url(../images/category-3.jpg);
+}
+
+.category.four {
+    background-image: url(../images/category-4.jpg);
+}
+
+.category-container {
+    height: 100%;
+    background-image: radial-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.3));
+    width: 100%;
+    text-align: left;
+    transition: .15s;
+}
+
+.category-header {
+    padding: 1.5rem;
+    height: 50%;
+    width: 100%;
+    position: absolute;
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), transparent);
+}
+
+.category-description {
+    font-size: .75rem;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.category-title {
+    font-size: 1.3rem;
+    font-weight: normal;
+}
+
+.note {
+    font-size: .65rem;
+    color: #aaa;
+    margin-top: 1rem;
+    margin-right: 3.8rem;
+}
+
+.add-on {
+    text-align: right;
+}
+
+/* LIVE TV */
+
+.live-tv .details {
+    margin-bottom: 1.5rem;
+    font-size: 1.2rem;
+}
+
+.regional-restrictions {
+    max-width: 775px;
+    margin: auto;
+}
+
+.live-tv button {
+    background-color: transparent;
+    border: none;
+    color: #ccc;
+    text-decoration: underline;
+    margin-top: 1rem;
+    font-weight: bold;
+    font-size: 1rem;
+    transition: .15s;
+    cursor: pointer;
+}
+
+.live-tv button:hover {
+    color: white;
+}
+
+.live-tv .dropdown-arrow {
+    text-decoration: none;
+    display: block;
+    margin: auto;
+    margin-top: 2rem;
+    animation: hover 2s forwards infinite ease-in-out;
+    padding: 1rem;
+}
+
+@keyframes hover {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(10px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
