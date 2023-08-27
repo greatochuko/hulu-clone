@@ -70,16 +70,16 @@ header nav a {
     padding-top: 1rem;
 }
 
-.pricing-plan {
+.plan {
     width: 320px;
 }
 
-.pricing-plan h2 {
+.plan h2 {
     font-size: .8rem;
     color: var(--main-color);
 }
 
-.pricing-plan.duo h2 {
+.plan.duo h2 {
     margin-bottom: 1.7rem;
 }
 
@@ -88,11 +88,11 @@ header nav a {
 }
 
 
-.pricing-plan.duo img {
+.plan.duo img {
     height: 56px;
 }
 
-.pricing-plan.trio img {
+.plan.trio img {
     height: 64px;
 }
 
@@ -295,4 +295,104 @@ section.live-tv {
     100% {
         transform: translateY(0);
     }
+}
+
+/* CHANNEL CATEGORIES */
+
+.channel-categories {
+    height: 811px;
+    background-repeat: no-repeat;
+    background-position: left;
+    background-size: cover;
+    display: none;
+}
+
+.channel-categories.sports {
+    background-image: url("../images/sports-channel-category.jpg");
+}
+
+.channel-categories.active {
+    display: block;
+}
+
+.channel-category {
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
+    height: 100%;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    color: white;
+    padding-left: 14%;
+    position: relative;
+}
+
+.channel-category .header {
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    animation: fadeup forwards .5s ease-in-out;
+    transform: translateY(1rem);
+}
+
+@keyframes fadeup {
+    0% {
+        transform: translateY(1rem);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.channel-category-nav {
+    display: flex;
+    gap: 2.5rem;
+    top: 12.5rem;
+    position: absolute;
+}
+
+.channel-category-nav::after {
+    content: "";
+    width: 80px;
+    height: 5px;
+    background-color: white;
+    position: absolute;
+    bottom: -1.2rem;
+}
+
+.channel-category-nav li {
+    list-style: none;
+    font-size: .8rem;
+    font-weight: 600;
+    color: #fff;
+    opacity: .4;
+    cursor: pointer;
+}
+
+.channel-category-nav li.active {
+    opacity: 1;
+}
+
+.channel-category .header .title {
+    font-size: 3rem;
+    margin-bottom: 1.2rem;
+}
+
+.channel-category .header .images {
+    display: flex;
+    gap: 1.6rem;
+    margin: 2rem 0;
+    margin-top: 1.5rem;
+}
+
+.channel-category .header img {
+    background-color: white;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+}
+
+.channel-category .note {
+    margin: 0;
 }
